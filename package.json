@@ -1,0 +1,24 @@
+{
+  "name": "tes-panorama",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently 'npx postcss public/assets/css/compile-main.css -o public/assets/css/main.css --watch' 'live-server ./public'",
+    "prod": "postcss public/assets/css/compile-main.css -o public/assets/css/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "daisyui": "^4.12.2",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.4"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3",
+    "concurrently": "^8.2.2"
+  }
+}

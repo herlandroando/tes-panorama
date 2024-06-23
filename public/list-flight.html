@@ -1,0 +1,314 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Ticket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/additional.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/56f252bc1b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <main>
+        <!-- Start Hero Section -->
+        <section class="text-white relative w-full">
+            <!-- Start Header Section -->
+            <header class=" md:p-4 p-3 flex justify-between items-center gap-3 w-full text-black shadow-md">
+                <div class="flex flex-row items-center">
+                    <button class="btn btn-ghost md:hidden block">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <a href="/">
+                        <h1 class="font-extrabold md:text-3xl text-2xl">XYZ Flight</h1>
+                    </a>
+                </div>
+                <div class="flex-row justify-center items-center gap-3 md:flex hidden">
+                    <a href="/" class="btn btn-link">
+                        Home
+                    </a>
+                    <a href="/find-flight.html" class="btn btn-link">
+                        Search Flight
+                    </a>
+                    <a class="btn btn-link ">
+                        Contact
+                    </a>
+                    <a class="btn btn-link">
+                        About Us
+                    </a>
+                </div>
+                <div class="flex flex-row justify-center items-center gap-3">
+                    <div class="dropdown dropdown-end text-black">
+                        <div tabindex="0" role="button" class="btn btn-ghost"><i class="bi bi-person"></i>
+                            <p>Test User</p>
+                        </div>
+                        <ul tabindex="0" class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                            <li><a>Profile</a></li>
+                            <li><a>Transactions</a></li>
+                            <li><a class="text-error" href="/no-auth.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- End Header Section -->
+        </section>
+        <!-- End Hero Section -->
+
+        <section class="p-8 ">
+            <div class="w-full">
+                <div class="backdrop-blur-sm bg-white/70 rounded-md mt-2 p-4">
+                    <form class="grid grid-cols-4 gap-4 text-black">
+                        <div class="flex flex-row w-full items-end justify-stretch gap-3 col-span-4">
+                            <div class="flex flex-col gap-2 flex-1">
+                                <label>From</label>
+                                <select class="select select-bordered w-full text-black" name="from">
+                                    <option selected value="CGK">CGK - Soekarno Hatta International Airport</option>
+                                    <option value="YIA">YIA - Yogyakarta International Airport</option>
+                                    <option value="UPG">UPG - Hassanudin</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <button type="button" class="btn btn-circle">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col gap-2 flex-1">
+                                <label>To</label>
+                                <select class="select select-bordered w-full  text-black" name="to">
+                                    <option value="CGK">CGK - Soekarno Hatta International Airport</option>
+                                    <option selected value="YIA">YIA - Yogyakarta International Airport</option>
+                                    <option value="UPG">UPG - Hassanudin</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label>Airlines</label>
+                            <select class="select select-bordered w-full max-w-xs text-black" name="airline">
+                                <option value="elang">Elang Indonesia</option>
+                                <option selected value="ngaung">Rawr Air</option>
+                                <option value="majapahit">Majapahit Air</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label>Departure</label>
+                            <input type="date" name="departure" placeholder="Your departure date"
+                                class="input input-bordered w-full max-w-xs text-black" value="2024-06-30">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex flex-row items-center gap-2">
+                                <input name="return" type="checkbox" class="checkbox" />
+                                <label>
+                                    Return</label>
+                            </div>
+                            <input type="date" placeholder="Your return date" disabled
+                                class="input input-bordered w-full max-w-xs text-black">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label>Passenger</label>
+                            <input name="passenger" type="number" placeholder="How many passenger?" value="1"
+                                class="input input-bordered w-full max-w-xs text-black">
+                        </div>
+                        <div>
+                            <button class="btn btn-primary mt-4"><i class="bi bi-search"></i> Search Flights</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-8 flex flex-row flex-between gap-5">
+            <div class="basis-1/4">
+                <div class="flex flex-col items-start gap-2 ">
+                    <h3 class="font-bold">Stops</h3>
+                    <hr class="w-full" />
+                    <label class="label cursor-pointer">
+                        <input type="checkbox" checked="checked" class="checkbox" />
+                        <span class="ml-2 label-text">Direct</span>
+                    </label>
+                    <label class="label cursor-pointer">
+                        <input type="checkbox" checked="checked" class="checkbox" />
+                        <span class="ml-2 label-text">1 Stop</span>
+                    </label>
+                    <label class="label cursor-pointer">
+                        <input type="checkbox" checked="checked" class="checkbox" />
+                        <span class="ml-2 label-text">2 Stops</span>
+                    </label>
+                </div>
+                <div class="flex flex-col items-start gap-2 mt-2">
+                    <h3 class="font-bold">Price Range</h3>
+                    <hr class="w-full" />
+                    <input type="range" min="0" max="4210000" value="4210000" class="range" />
+                    <div class="flex flex-row justify-between w-full">
+                        <span>Rp. 0,00</span>
+                        <span>Rp. 4.210.000,00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="basis-3/4 flex flex-col gap-4 max-h-[600px] overflow-auto">
+                <div class="card bg-slate-50 shadow-sm w-full text-black">
+                    <div class="card-body items-center text-center grid grid-cols-12">
+                        <div class="col-span-3 ">
+                            <p class="text-xl font-bold">Ngaung Air</p>
+                        </div>
+                        <div
+                            class="col-span-6 flex flex-row justify-between border-l-[1px] border-r-[1px] border-solid border-slate-200 px-3">
+                            <div>
+                                <p class="text-xl font-bold">06:00 AM</p>
+                                <p>CGK</p>
+                            </div>
+                            <div>
+                                <div class="rotate-90 text-2xl">
+                                    <i class="bi bi-airplane-engines"></i>
+                                </div>
+                                <p class="mt-1">1 Stop - 1h</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold">07:00 AM</p>
+                                <p>YIA</p>
+                            </div>
+
+                        </div>
+                        <div class="col-span-3">
+                            <p class="text-xl font-bold">Rp. 1.500.000</p>
+                            <a href="/orders.html" class="btn btn-primary mt-2">Choose Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-slate-50 shadow-sm w-full text-black">
+                    <div class="card-body items-center text-center grid grid-cols-12">
+                        <div class="col-span-3">
+                            <p class="text-xl font-bold">Majapahit Air</p>
+                        </div>
+                        <div
+                            class="col-span-6 flex flex-row justify-between border-l-[1px] border-r-[1px] border-solid border-slate-200 px-3">
+                            <div>
+                                <p class="text-xl font-bold">08:30 AM</p>
+                                <p>CGK</p>
+                            </div>
+                            <div>
+                                <div class="rotate-90 text-2xl">
+                                    <i class="bi bi-airplane-engines"></i>
+                                </div>
+                                <p class="mt-1">1 Stop - 1h</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold">09:30 AM</p>
+                                <p>YIA</p>
+                            </div>
+
+                        </div>
+                        <div class="col-span-3">
+                            <p class="text-xl font-bold">Rp. 1.659.000</p>
+                            <a href="/orders.html" class="btn btn-primary mt-2">Choose Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-slate-50 shadow-sm w-full text-black">
+                    <div class="card-body items-center text-center grid grid-cols-12">
+                        <div class="col-span-3">
+                            <p class="text-xl font-bold">Majapahit Air</p>
+                        </div>
+                        <div
+                            class="col-span-6 flex flex-row justify-between border-l-[1px] border-r-[1px] border-solid border-slate-200 px-3">
+                            <div>
+                                <p class="text-xl font-bold">16:30 AM</p>
+                                <p>CGK</p>
+                            </div>
+                            <div>
+                                <div class="rotate-90 text-2xl">
+                                    <i class="bi bi-airplane-engines"></i>
+                                </div>
+                                <p class="mt-1">1 Stop - 1h</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold">17:30 AM</p>
+                                <p>YIA</p>
+                            </div>
+
+                        </div>
+                        <div class="col-span-3">
+                            <p class="text-xl font-bold">Rp. 1.699.000</p>
+                            <a href="/orders.html"  class="btn btn-primary mt-2">Choose Flight</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-slate-50 shadow-sm w-full text-black">
+                    <div class="card-body items-center text-center grid grid-cols-12">
+                        <div class="col-span-3">
+                            <p class="text-xl font-bold">Elang Indonesia</p>
+                        </div>
+                        <div
+                            class="col-span-6 flex flex-row justify-between border-l-[1px] border-r-[1px] border-solid border-slate-200 px-3">
+                            <div>
+                                <p class="text-xl font-bold">12:30 AM</p>
+                                <p>CGK</p>
+                            </div>
+                            <div>
+                                <div class="rotate-90 text-2xl">
+                                    <i class="bi bi-airplane-engines"></i>
+                                </div>
+                                <p class="mt-1">1 Stop - 40m</p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold">13:10 AM</p>
+                                <p>YIA</p>
+                            </div>
+
+                        </div>
+                        <div class="col-span-3">
+                            <p class="text-xl font-bold">Rp. 2.999.000</p>
+                            <a href="/orders.html"  class="btn btn-primary mt-2">Choose Flight</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- End Recommendation Section -->
+        <footer class="border-solid border-t-[1px] border-gray-200 p-8 mx-5 flex flex-row justify-between gap-20 mt-20">
+            <h2 class="font-extrabold md:text-3xl text-2xl">XYZ Flight</h2>
+            <div class="flex flex-col items-start">
+                <h3 class="pl-4 font-bold">Company</h3>
+                <a class="btn btn-link text-black">
+                    Career
+                </a>
+                <a class="btn btn-link text-black">
+                    About Us
+                </a>
+            </div>
+            <div class="flex flex-col items-start">
+                <h3 class="pl-4 font-bold">Support</h3>
+                <a class="btn btn-link text-black">
+                    Support Center
+                </a>
+                <a class="btn btn-link text-black">
+                    Privacy Policy
+                </a>
+                <a class="btn btn-link text-black">
+                    Terms & Conditions
+                </a>
+            </div>
+            <div class="flex flex-col items-start w-[25%]">
+                <h3 class="pl-4 font-bold">Contact</h3>
+                <a class="btn btn-link text-black">
+                    <i class="bi bi-facebook"></i> Facebook
+                </a>
+                <a class="btn btn-link text-black">
+                    <i class="bi bi-twitter-x"></i> X
+                </a>
+                <a class="btn btn-link text-black">
+                    <i class="bi bi-linkedin"></i> Linkedin
+                </a>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

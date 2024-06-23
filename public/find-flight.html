@@ -1,0 +1,166 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Ticket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/additional.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/56f252bc1b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <main>
+        <!-- Start Hero Section -->
+        <section class="hero text-white relative w-full">
+            <div class="w-full h-full">
+                <img class="hero-img" src="assets/img/hero.jpg">
+            </div>
+            <!-- Start Header Section -->
+            <header class="absolute top-0 md:p-4 p-3 flex justify-between items-center gap-3 w-full">
+                <div class="flex flex-row items-center">
+                    <button class="btn btn-ghost md:hidden block">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <a href="/">
+                        <h1 class="font-extrabold md:text-3xl text-2xl">XYZ Flight</h1>
+                    </a>
+                </div>
+                <div class="flex-row justify-center items-center gap-3 md:flex hidden">
+                    <a href="/" class="btn btn-link text-white">
+                        Home
+                    </a>
+                    <a href="/find-flight.html" class="btn btn-link !no-underline text-white">
+                        Search Flight
+                    </a>
+                    <a class="btn btn-link text-white">
+                        Contact
+                    </a>
+                    <a class="btn btn-link text-white">
+                        About Us
+                    </a>
+                </div>
+                <div class="flex flex-row justify-center items-center gap-3">
+                    <div class="dropdown dropdown-end text-black">
+                        <div tabindex="0" role="button" class="btn btn-ghost text-white"><i class="bi bi-person"></i>
+                            <p>Test User</p>
+                        </div>
+                        <ul tabindex="0" class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                            <li><a>Profile</a></li>
+                            <li><a>Transactions</a></li>
+                            <li><a class="text-error" href="/no-auth.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="absolute bottom-20 p-8 w-full min-h-4">
+                <h2 class="font-bold text-2xl">Ready to Flight?</h2>
+                <div class="backdrop-blur-sm bg-white/70 rounded-md mt-4 p-7">
+                    <form class="grid grid-cols-4 gap-4 text-black">
+                        <div class="flex flex-row w-full items-end justify-stretch gap-3 col-span-4">
+                            <div class="flex flex-col gap-2 flex-1">
+                                <label>From</label>
+                                <select class="select select-bordered w-full text-black" name="from">
+                                    <option selected value="CGK">CGK - Soekarno Hatta International Airport</option>
+                                    <option value="YIA">YIA - Yogyakarta International Airport</option>
+                                    <option value="UPG">UPG - Hassanudin</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <button type="button" class="btn btn-circle">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col gap-2 flex-1">
+                                <label>To</label>
+                                <select class="select select-bordered w-full  text-black" name="to">
+                                    <option value="CGK">CGK - Soekarno Hatta International Airport</option>
+                                    <option selected value="YIA">YIA - Yogyakarta International Airport</option>
+                                    <option value="UPG">UPG - Hassanudin</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label>Airlines</label>
+                            <select class="select select-bordered w-full max-w-xs text-black" name="airline">
+                                <option value="elang">Elang Indonesia</option>
+                                <option selected value="ngaung">Rawr Air</option>
+                                <option value="majapahit">Majapahit Air</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label>Departure</label>
+                            <input type="date" name="departure" placeholder="Your departure date"
+                                class="input input-bordered w-full max-w-xs text-black">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex flex-row items-center gap-2">
+                                <input name="return" type="checkbox" checked="checked" class="checkbox" />
+                                <label>
+                                    Return</label>
+                            </div>
+                            <input type="date" placeholder="Your return date"
+                                class="input input-bordered w-full max-w-xs text-black">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label>Passenger</label>
+                            <input name="passenger" type="number" placeholder="How many passenger?"
+                                class="input input-bordered w-full max-w-xs text-black">
+                        </div>
+                        <div>
+                            <a class="btn btn-primary mt-4" href="/list-flight.html"><i class="bi bi-search"></i> Search Flights</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End Header Section -->
+        </section>
+        <!-- End Hero Section -->
+
+
+        <!-- End Recommendation Section -->
+        <footer class="border-solid border-t-[1px] border-gray-200 p-8 mx-5 flex flex-row justify-between gap-20">
+            <h2 class="font-extrabold md:text-3xl text-2xl">XYZ Flight</h2>
+            <div class="flex flex-col items-start">
+                <h3 class="pl-4 font-bold">Company</h3>
+                <a class="btn btn-link text-black">
+                    Career
+                </a>
+                <a class="btn btn-link text-black">
+                    About Us
+                </a>
+            </div>
+            <div class="flex flex-col items-start">
+                <h3 class="pl-4 font-bold">Support</h3>
+                <a class="btn btn-link text-black">
+                    Support Center
+                </a>
+                <a class="btn btn-link text-black">
+                    Privacy Policy
+                </a>
+                <a class="btn btn-link text-black">
+                    Terms & Conditions
+                </a>
+            </div>
+            <div class="flex flex-col items-start w-[25%]">
+                <h3 class="pl-4 font-bold">Contact</h3>
+                <a class="btn btn-link text-black">
+                    <i class="bi bi-facebook"></i> Facebook
+                </a>
+                <a class="btn btn-link text-black">
+                    <i class="bi bi-twitter-x"></i> X
+                </a>
+                <a class="btn btn-link text-black">
+                    <i class="bi bi-linkedin"></i> Linkedin
+                </a>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

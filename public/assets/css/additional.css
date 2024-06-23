@@ -1,0 +1,23 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings:
+        "slnt" 0;
+}
+
+.hero {
+    height: calc(100vh + 1.25rem);
+    /* padding: 2rem 3rem; */
+}
+
+.hero-img {
+    height: calc(100vh + 1.25rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 425px) {
+    .hero-img {
+        object-position: 50% 0;
+    }
+}

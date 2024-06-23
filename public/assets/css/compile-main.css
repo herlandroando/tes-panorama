@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card.card-recommend figure {
+    @apply w-auto h-[20em]
+}
+
+.card.card-recommend figure img{
+    @apply object-cover h-full w-full
+}
